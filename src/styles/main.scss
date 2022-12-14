@@ -1,0 +1,25 @@
+/**
+  =========================================================
+  * This website is produced by Unnamed Co., ltd.
+  * e-mail: {emailAddress}
+  * website: {website}
+  =========================================================
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+**/
+
+// Core Styles
+@import 
+  'core/variable',
+  'core/mixin',
+  'core/reset',
+  'core/global';
+
+// Component Styles
+@import 
+  'components/button',
+  'components/input';
+
+// Page Styles
+@import 
+  'pages/auth',
+  'pages/todo';

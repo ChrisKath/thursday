@@ -1,0 +1,1 @@
+self.__RSC_CSS_MANIFEST={"__entry_css__":{"D:\\Workspace\\project_alice\\next\\src\\app\\page":["D:\\Workspace\\project_alice\\next\\src\\styles\\main.scss"]},"D:\\Workspace\\project_alice\\next\\src\\app\\layout.tsx":["D:\\Workspace\\project_alice\\next\\src\\styles\\main.scss"]}

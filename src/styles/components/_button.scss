@@ -1,0 +1,35 @@
+.btn {
+  position: relative;
+  display: grid;
+  gap: 0.25rem;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  border-radius: var(--border-radius-small);
+  transition: all var(--transition-time) ease;
+
+  &-text {
+    &:hover {
+      .text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-primary {
+    color: var(--color-secondary);
+    background-color: var(--color-space-2);
+  }
+
+  &-secondary {
+    color: var(--color-primary);
+    background-color: var(--color-space-5);
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+  }
+}

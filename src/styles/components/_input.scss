@@ -1,0 +1,98 @@
+.ui--input {
+  &-provider {
+    position: relative;
+  }
+
+  &-label {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+
+    &.required::after {
+      margin-left: 5px;
+      content: ' *';
+      color: var(--color-red);
+      font-size: var(--font-size-regular);
+    }
+
+    .icon {
+      color: var(--color-secondary);
+      line-height: 1;
+      font-size: var(--font-size-regular);
+      margin-right: 7.5px;
+      padding-right: 5px;
+      border-right: 1px solid var(--color-border-1);
+    }
+
+    .text {
+      color: var(--color-secondary);
+      font-size: var(--font-size-medium);
+    }
+  }
+
+  &-desc {
+    color: var(--color-desc-2);
+    font-size: var(--font-size-small);
+    margin: 0.5rem 0 0;
+  }
+
+  &-field {
+    position: relative;
+
+    input {
+      height: 46px;
+      padding: 0 1rem;
+      margin: 0.5rem 0 0;
+      color: var(--color-secondary);
+      background-color: var(--color-space-1);
+      border-radius: var(--border-radius-small);
+
+      & ~ .icon {
+        position: absolute;
+        top: 0.5rem;
+        right: 0;
+        bottom: 0;
+        padding: 16.5px 10px;
+        line-height: 0;
+        color: var(--color-border-2);
+      }
+
+      @include attr('type', 'password') {
+        letter-spacing: 4px;
+        font-weight: var(--font-weight-bold);
+      }
+
+      @include attr('type', ('number', 'search')) {
+        appearance: none;
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          appearance: none;
+          -webkit-appearance: none;
+        }
+      }
+    }
+  }
+
+  &-textarea {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    min-height: 80px;
+    max-height: 120px;
+    resize: vertical;
+    margin: 0.5rem 0 0;
+    color: var(--color-secondary);
+    background-color: var(--color-space-1);
+    border-radius: var(--border-radius-small);
+  }
+
+  &-errors {
+    display: block;
+    color: var(--color-red);
+    font-style: italic;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-size-medium);
+  }
+}

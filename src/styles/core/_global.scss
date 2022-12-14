@@ -1,0 +1,15 @@
+// SET global classes.
+.ui- {
+  &-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  &-router {
+    &-view {
+    }
+  }
+}
+

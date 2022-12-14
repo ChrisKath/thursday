@@ -1,0 +1,47 @@
+{
+  "name": "project_unnamed",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start:dev": "next dev --port 8443",
+    "start": "next start",
+    "build": "next build",
+    "prebuild": "rimraf dist"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "classnames": "^2.3.2",
+    "date-fns": "^2.29.3",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.40.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.3.1",
+    "@types/js-cookie": "^3.0.2",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.11.14",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.2",
+    "typescript": "^4.9.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

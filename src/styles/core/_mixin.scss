@@ -1,0 +1,68 @@
+// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@mixin attr($attr, $values) {
+  @if type-of($values) == 'list' {
+    @each $value in $values {
+      &[#{$attr}='#{$value}'] {
+        @content;
+      }
+    }
+  } @else {
+    &[#{$attr}='#{$values}'] {
+      @content;
+    }
+  }
+}
+
+@mixin input($type) {
+  input[type='#{$type}'] {
+    @content;
+  }
+}
+
+@mixin dark-mode() {
+  @media (prefers-color-scheme: dark) {
+    @at-root #{selector-nest(':root:not([theme=light]):not([theme=dark])', &)} {
+      @content;
+    }
+  }
+
+  @at-root #{selector-nest(':root[theme=dark]', &)} {
+    @content;
+  }
+}
+
+@mixin class-startWith($class-match) {
+  [class^='#{$class-match}'] {
+    @content;
+  }
+}
+
+@mixin class-contains($class-match) {
+  [class*='#{$class-match}'] {
+    @content;
+  }
+}
+
+@mixin class-endWith($class-match) {
+  [class$='#{$class-match}'] {
+    @content;
+  }
+}
+
+@mixin text-ellipsis($height, $max-line: 2) {
+  display: -webkit-box;
+  max-height: $height;
+  -webkit-line-clamp: $max-line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
